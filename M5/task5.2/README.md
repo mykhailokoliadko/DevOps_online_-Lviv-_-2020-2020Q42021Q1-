@@ -1,5 +1,4 @@
 1 --------------------Fields in passwd--------------------
-
 - cat /etc/passwd - to check list of all users account
 - cut -d: -f1 /etc/passwd - to see only names of users
 - getent passwd or getent passwd user - info about all users or about particular user
@@ -12,6 +11,8 @@ Fields (from left to right)
 - user ID info
 - home directory
 - command/shell
+
+<img src="image/task2_(1).png">
 
 Type of users
 
@@ -26,6 +27,7 @@ Define them
 
 -root, mike, daemon
 
+<img src="image/1) defineusers.png">
 
 - find mike user in passwd - grep userName /etc/passwd
 - list of users - cat /etc/passwd
@@ -43,7 +45,7 @@ Define them
 - GID
 - group list (list of users who are members of the group)
 
-
+<img src="image/task2_(1.1).png">
 
 
 
@@ -57,12 +59,14 @@ How define
 
 - id command userName and the asme for 
 
+<img src="image/2UIDdefine.png">
 
 3 ----------------What GID/how define-------------------------
 Group identifier is a name and number that associates a user with other users sharing something in common.
 
 How define
 - id command userName 
+
 
 
 
@@ -74,6 +78,7 @@ Or just - id command
 
 Who belong to particular group - (need to install utility members then) members nameofthegroup
 
+<img src="image/4belongtogroup.png">
 
 ---------------------- 5  ------------------------
 
@@ -107,7 +112,7 @@ drwxr-xr-x 130 root root 12288 січ 23 23:29 ..
 -rw-r--r--   1 root root   807 лют 25  2020 .profile
 
 ------------------------ 8 ------------------------------
- Remove user from system with mailbox
+ <h2>Remove user from system with mailbox</h2>
 
 - userdel -r <userName>
 
@@ -121,10 +126,13 @@ drwxr-xr-x 130 root root 12288 січ 23 23:29 ..
 
 sudo passwd -d userName
 
+<img src="image/10delete_password.png">
 
 ---------------------- 11 -------------------
 
-ls -la 
+<code>ls -la</code> 
+
+<img src="image/11extendetformat.png">
 
 - fields (1-4) with access rights 
 - 5 field specifies the number of links or directories inside this director
@@ -135,6 +143,8 @@ ls -la
 - 10 field name of the file
 
 ----------------------- 12 - 13 -----------------------
+<img src="image/12-13access_rights.png">
+<img src="image/12-13suid.png">
 
 Type of permissions
 - r - you can read file
@@ -147,7 +157,6 @@ Special access right
 - Sticky-bit (It restricts file deletion. Only the owner (and root) of a file can remove the file within that directory/protection from fools)
 
 
-
 For whom (3 types of ownership)
 
 - User (Owner of file)
@@ -157,10 +166,14 @@ For whom (3 types of ownership)
 ------------------------- 14 ----------------------------
 
 chmod 
-example image
+
+<img src="image/14chmod.png">
+
 
 chown
-example image
+
+<img src="image/14chown.png">
+
 
 ---------------------------- 15 --------------------------------
 
@@ -177,6 +190,8 @@ umask - set default creation permissions
 so if you create directory that should be 777 by default with umask you can change this behavior
 
 -------------------------- 16 ------------------------------
+
+<img src="image/16examples.png">
 
 - Sticky-bit (It restricts file deletion. Only the owner (and root) of a file can remove the file within that directory/protection from fools)
 
