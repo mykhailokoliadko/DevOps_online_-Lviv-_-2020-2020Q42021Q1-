@@ -11,7 +11,7 @@
 
 pstree -shc number_PID
 
-here image
+<img src="images/5.3_1.2.png">
 
 <h2>What is /proc</h2>
 proc is Virtual file system, it contains information about ongoing processes, memory managment and some hadware information.It also regarded as control and information centre for kernel.
@@ -19,7 +19,7 @@ The proc file system also provides communication medium between kernel space and
 
 The numbered files are directories that correspond to process numbers or process IDs (PIDs)
 
-5.1_1.3
+<img src="images/5.1_1.3.png">
 
 <h2>Print information about processor</h2>
 lscpu 
@@ -27,12 +27,10 @@ cat /proc/cpuinfo
 
 But lscpu actually use cat /proc/cpuinfo as source
 
-5.1_1.4.1
-5.1_1.4.2
-
-<h2>Use the ps command to get information about the process</h2>
-
-
+<img src="images/5.1_1.4.1.png">
+<img src="images/5.1_1.4.2.png">
+<h2>Use the ps command to get information about the process. The information should be as follows: the owner of the process...</h2>
+<img src="images/5.1_5.png">
 
 <h2>How to define kernel processes and user processes</h2>
 
@@ -40,15 +38,19 @@ Kernel processes are children of PID 2 (kthreadd)
 
 ps --ppid 2 -p 2 -o uname,pid,ppid,cmd,cls
 Add --deselect to invert the selection and see only user-space processes.
-5.3_6.1
-5.3_6.2
+<img src="images/5.3_6.1.png">
+<img src="images/5.3_6.2.png">
 
 
 <h2>Print the list of processes to the terminal. Briefly describe the statuses of the processes.</h2>
-
-
-5.3_7.1 - 5.3_7.8
-
+<img src="images/5.3_7.1.png">
+<img src="images/5.3_7.2.png">
+<img src="images/5.3_7.3.png">
+<img src="images/5.3_7.4.png">
+<img src="images/5.3_7.5.png">
+<img src="images/5.3_7.6.png">
+<img src="images/5.3_7.7.png">
+<img src="images/5.3_7.8.png">
 
 Ss - Sleeping and the process is interruptible it will respond when needed and the session leader.
 S - Sleeping and the process is interruptible
@@ -76,11 +78,17 @@ Exist 5 states of process in linux
 - Stopped - A process is stopped when it receives the signal SIGSTOP (like for example when you hit <ctrl>+z in the terminal). The process execution is then suspended and it will manage only the SIGKILL and SIGCONT signals. For instance, a process that is being debugged is in a stopped state.
 - Zombie - When a child process gets killed before its parent, it will become a zombie. This process is neither alive nor dead. It has finished its assigned task with exit() system call. It still has an entry in the process table though
 
+<h2>Display only the processes of a specific user</h2>
+<img src="images/5.3_8.png">
+
+<h2>What utilities can be used to analyze existing running tasks</h2>
+<img src="images/5.3_9.1.png">
+<img src="images/5.3_9.2.png">
 
 
 <h2>What information does top command display</h2>
+<img src="images/5.3_10.png">
 
-5.3_10
 
 The top command contains statistics on processes and resource usage, while the lower half contains a list of the currently running processes
 
@@ -105,22 +113,29 @@ COMMAND - Shows the name of the processes
 <h2>Display the processes of the specific user using the top command.</h2>
 
 Just pres "u" key and then type the name of user and hit enter))
+<img src="images/5.3_11.png">
+<img src="images/5.3_11.1.png">
+
 
 <h2>What interactive commands can be used to control the top command</h2>
 
 We can type f or F to activate Fields-Management.
 These keys display a separate screen where we can change which fields are displayed, their order, and also designate the sort field.
-
-5.3_12.1
+<img src="images/5.3_12.1.png">
 
 <h2>Sort the contents of the processes window using various parameters</h2>
 
 We can use <code>shift+f</code> to sort output of top command
 
-5.3_13.1 - original
-5.3_13.2 - sort by CPU time
-5.3_13.3 - sort by PR
-5.5_13.4 - sort by user
+<img src="images/5.3_13.1.png">
+<img src="images/5.3_13.2.png">
+<img src="images/5.3_13.3.png">
+<img src="images/5.3_13.4.png">
+
+1 - original
+2 - sort by CPU time
+3 - sort by PR
+4 - sort by user
 
 
 <h2>Concept of priority, what commands are used to set priority</h2>
@@ -157,6 +172,8 @@ All the same
 - kill -9 21567
 - kill -SIGKILL 21567
 - kill -kill 21567
+<img src="images/5.3_16.png">
+
 
 <h2>Commands jobs, fg, bg, nohup. What are they for?</h2>
 
@@ -165,20 +182,39 @@ All the same
 <code>bg</code> - The bg command is used to resume suspended background jobs
 <code>nohup</code> - Nohup, short for no hang up is a command in Linux systems that keep processes running even after exiting the shell or terminal.
 
-
-5.5_17(17.1)
+<img src="images/5.3_17.png">
+<img src="images/5.3_17.1.png">
 
 Run sleep command
 Then type <code>ctrl+z</code> to put process in background(or use "&"), resume status with <code>ps</code> command and then brining a process to the foreground with <code>fg</code>.
 
 
 
+<h1>Part 2</h1>
 
-
-
-
-
-
+<h2>Check the implementability of the most frequently used OPENSSH commands in the MS Windows</h2>
+<img src="images/5.3_1WindowsSSHconect.png">
+<img src="images/5.3WindowsKeyGen.png">
+<img src="images/5.3SendId_RSA.png">
+<img src="images/5.3_AddIndentiy.png">
+<img src="images/5.3welcome.png">
+<h2>Implement basic SSH settings to increase the security of the client-server connection/List the options for choosing keys for encryption in SSH. Implement 3 of them</h2>
+<h3>create keys</h3>
+<img src="images/5.3_ecdsakeycreateadd.png">
+<img src="images/5.3_createRSAkey.png">
+<img src="images/5.3_sshCopyIdAutoRSA.png">
+<img src="images/5.3_ED25519Keyaddcreate.png">
+<img src="images/5.3_proofallkeys.png">
+<h3>work with SCP,SFTP</h3>
+<img src="images/5.3_SCPfilefromserver.png">
+<img src="images/5.3_SCPsendfiletoserver.png">
+<img src="images/5.3_SFTPGetfilefromServer.png">
+<img src="images/5.3_SFTPputFiletoServer.png">
+<h2>Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.</h2>
+<img src="images/5.3portFortward_1.png">
+<img src="images/5.3PPortF_VBSet.png">
+<img src="images/5.3PFVBSet.png">
+<h2>5* in progress</h2>
 
 
 
