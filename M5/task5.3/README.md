@@ -30,7 +30,7 @@ But lscpu actually use cat /proc/cpuinfo as source
 <img src="images/5.1_1.4.1.png">
 <img src="images/5.1_1.4.2.png">
 <h2>Use the ps command to get information about the process. The information should be as follows: the owner of the process...</h2>
-<img src="images/5.1_5.png">
+<img src="images/5.3_5.png">
 
 <h2>How to define kernel processes and user processes</h2>
 
